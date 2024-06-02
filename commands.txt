@@ -1,0 +1,13 @@
+git remote set-url kafka https://github.com/luvvrisshii/learningKafka
+
+git config --unset-all --global credential.helper
+
+git config --global credential.helper store
+
+
+
+Cluster Coordination: ZooKeeper serves as a distributed coordination service for the Kafka cluster. It maintains information about the overall Kafka cluster, such as the list of available brokers, the topics that exist, which partitions belong to which topics, and the configuration settings.
+Broker Discovery: Producers and consumers initially connect to ZooKeeper to discover the list of available brokers in the Kafka cluster. ZooKeeper helps clients find the brokers they need to communicate with.
+Controller Election: ZooKeeper is involved in electing the Kafka controller, which is responsible for administrative tasks like partition leadership election and reassignment.
+Broker Liveness Detection: ZooKeeper monitors the liveness of brokers in the cluster. If a broker fails, ZooKeeper detects this and triggers actions like partition reassignment or controller election to maintain cluster stability.
+
