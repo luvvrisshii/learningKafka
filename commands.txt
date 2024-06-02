@@ -4,6 +4,7 @@ git config --unset-all --global credential.helper
 
 git config --global credential.helper store
 
+git pull --rebase kafka main
 
 
 Cluster Coordination: ZooKeeper serves as a distributed coordination service for the Kafka cluster. It maintains information about the overall Kafka cluster, such as the list of available brokers, the topics that exist, which partitions belong to which topics, and the configuration settings.
